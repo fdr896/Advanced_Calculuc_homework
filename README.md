@@ -1,1 +1,1 @@
-# Advanced_Calculuc_homework
+# Advanced_Calculus_homework
