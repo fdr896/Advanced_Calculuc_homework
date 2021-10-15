@@ -1,0 +1,15 @@
+function integral = int_circle(N, R)
+    f = @(z) 1/(z-1/10) + 1/(z-2) + 1/z;
+    
+    x_up = randi([-R R], )
+    y_up = sqrt(R^2.-x_up.^2);
+    x_down = -R + rand(1, N).*range(R)
+    y_down = -sqrt(R^2.-x_down.^2);
+    z = [x_up + 1i .* y_up, x_down + 1i .* y_down];
+    z(N+1)=z(1);
+    
+    integral = 0;
+    for i = 1:N
+        integral = integral + f(z(i)) * (z(i+1)-z(i));
+    end
+end

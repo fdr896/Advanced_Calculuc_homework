@@ -1,0 +1,15 @@
+res = int_par(1000000);
+res2 = int_quad(1000000);
+
+iterations = 10000;
+errors_par = zeros(iterations);
+errors_quad = zeros(iterations);
+for i = 100:iterations
+    errors_par(i) = abs(res - int_par(i));
+    errors_quad(i) = abs(res2 - int_quad(i));
+end
+
+figure(1);
+plot(100:1000, errors_par);
+figure(2);
+plot(, errors_quad);
